@@ -12,9 +12,11 @@ namespace PromotionEngine
         public double ItemPrice { get; set; }
         public int Quantity { get; set; }
 
-        public double Add(int quantity)
+        public Dictionary<char,double> Add(int quantity)
         {
-            return quantity * ItemPrice;
+            Dictionary<char, double> data = new Dictionary<char, double>();
+            data.Add(ItemName, quantity * ItemPrice);
+            return data;
         }
     }
 }

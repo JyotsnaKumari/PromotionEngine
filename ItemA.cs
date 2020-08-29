@@ -8,7 +8,6 @@ namespace PromotionEngine
 {
     class ItemA : ItemBase
     {
-
         public ItemA(int quantity)
         {
             this.ItemName = 'A';
