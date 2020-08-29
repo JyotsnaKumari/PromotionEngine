@@ -49,6 +49,8 @@
     <Compile Include="ItemA.cs" />
     <Compile Include="ItemBase.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Promotion2.cs" />
+    <Compile Include="Promotion3.cs" />
     <Compile Include="Promotion1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
