@@ -8,9 +8,9 @@ namespace PromotionEngine
 {
     public class ItemBase
     {
-        protected char ItemName { get; set; }
-        protected double ItemPrice { get; set; }
-        protected int Quantity { get; set; }
+        public char ItemName { get; set; }
+        public double ItemPrice { get; set; }
+        public int Quantity { get; set; }
 
         public double Add(int quantity)
         {
