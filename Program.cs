@@ -34,7 +34,7 @@ namespace PromotionEngine
             string ItemD = Console.ReadLine();
             ItemBase fourthItem = new ItemD(Convert.ToInt32(ItemD));
 
-                switch (firstItem.Quantity >= 3 ? 'A' : (secondItem.Quantity >= 2 ? 'B' : 'C'))
+                switch (firstItem.Quantity >= 3 ? 'A' : (secondItem.Quantity >= 2 ? 'B' : (thirdItem.Quantity > 1 && fourthItem.Quantity > 1 ? 'C': default)))
                 {
                     case 'A':
                         //Apply promotion1
@@ -45,6 +45,7 @@ namespace PromotionEngine
                         dataC = thirdItem.Add(Convert.ToInt32(ItemC));
                         dataD = fourthItem.Add(Convert.ToInt32(ItemD));
                         break;
+
                     case 'B':
                         //Apply promotion2
                         Console.WriteLine("Congratulations.. Applied Promotion2 2B -> 45");
@@ -63,10 +64,16 @@ namespace PromotionEngine
                         dataA = firstItem.Add(Convert.ToInt32(ItemA));
                         dataB = secondItem.Add(Convert.ToInt32(ItemB));
                         break;
+
                     default:
-                        // default case taken care in case 'C'
-                        break;
-                }
+                    //
+                    Console.WriteLine("No promotion applied");
+                    dataA = firstItem.Add(Convert.ToInt32(ItemA));
+                    dataB = secondItem.Add(Convert.ToInt32(ItemB));
+                    dataC = thirdItem.Add(Convert.ToInt32(ItemC));
+                    dataD = fourthItem.Add(Convert.ToInt32(ItemD));
+                    break;
+            }
 
 
                 foreach (KeyValuePair<char, double> cart in dataA)
